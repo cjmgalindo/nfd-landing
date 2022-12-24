@@ -1,0 +1,55 @@
+@mixin bg{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.section__home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),url(../media/bg/bg-home.jpg);
+    @include bg;
+    height: 100vh;
+
+    .personaje__home{
+        width: 5em;
+    }
+    
+    
+
+    
+}
+
+.section__about{
+    background-color: #141118;
+    height: 100vh;
+
+    img{
+        width: 20em;
+    }
+}
+
+.section__assets{
+    background-image: linear-gradient(rgba(37, 39, 70, 0.5), rgba(19, 19, 49, 0.7)),url(../media/bg/bg-assets.jpg);
+    @include bg;
+    height: 100vh;
+}
+
+.section__timelin{
+    background-color: #141118;
+    height: 100vh;
+}
+
+.section__users{
+    background-image: linear-gradient(rgba(7, 7, 7, 0.5), rgba(0, 0, 0, 0.7)),url(../media/bg/bg-users.jpg);
+    @include bg;
+    height: 100vh;
+
+    img{
+        width: 10em;
+    }
+}
+.section__logos{
+    background-color: #141118;
+    height: 60vh;
+}
+

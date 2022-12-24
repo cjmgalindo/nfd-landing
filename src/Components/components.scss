@@ -5,11 +5,12 @@
 }
 
 header{
-    background-color: #3A3737;
+    position: absolute;
+
+    width: 100%;
     @include flexbox();
     justify-content: space-between;
-    
-    padding: 0 7vw;
+
 
 
     .box_logo_main{
@@ -20,12 +21,12 @@ header{
 
     nav{
         @include flexbox();
-        gap: 4em;
+        
         
         ul{
             
             @include flexbox();
-            gap: 4em;
+          
 
             text-transform: uppercase;
             font-weight: 700;
@@ -63,9 +64,7 @@ header{
             }
             
         }
-    }
-
-    button{
+        button{
         background: #92132E;
         width: 7em;
         height: 2em;
@@ -73,4 +72,14 @@ header{
         border-radius: .5em 0 ;
         
     }
+    }
+
+    
+}
+
+
+
+footer{
+    background-color: #012523;
+    height: 40vh;
 }

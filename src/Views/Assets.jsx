@@ -2,7 +2,12 @@ import React from 'react'
 
 function Assets() {
   return (
-    <div>Assets</div>
+    <section className="section__assets">
+      <h1>ASSETS</h1>
+      <div className="box__assets">
+        
+      </div>
+    </section>
   )
 }
 

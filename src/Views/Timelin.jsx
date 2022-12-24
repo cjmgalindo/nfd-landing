@@ -1,8 +1,33 @@
 import React from 'react'
 
 function Timelin() {
+  
+ 
+  function fBox(cantidad) {
+    const boxs = []
+    for (let i = 1; i < cantidad+1; i++) {
+      boxs.push(
+        <div className='card__timelin'>
+
+          <p className='code'>Q{i} <br /> 2021</p>
+          <div className='text'>
+            <h3>Starting point</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit perferendis sequi soluta molestias, sit magni veritatis repellat provident tempore voluptatum? Repellendus id enim tempora molestias eaque. Aspernatur, possimus distinctio? Saepe porro nihil suscipit magni rem tempore similique, laudantium eligendi!</p>
+          </div>
+        </div>
+      )
+      
+      
+    }
+    return boxs;
+  }
+
   return (
-    <div>Timelin</div>
+    <section className="section__timelin">
+      <h1>TIMELIN</h1>
+
+      {fBox(3)}
+    </section>
   )
 }
 

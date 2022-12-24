@@ -2,7 +2,8 @@ import React from 'react'
 import './components.scss'
 
 import logo from '../media/logo.png'
-import mustache from '../media/mostacho.png'
+
+
 
 function Header() {
   return (
