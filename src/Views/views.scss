@@ -5,16 +5,72 @@
     width: 100%;
 }
 
+@mixin fb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .section__home{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),url(../media/bg/bg-home.jpg);
     @include bg;
     height: 100vh;
 
+    position: relative;
+    overflow: hidden;
+
+    @include fb;
+    justify-content: end;
+
+
     .personaje__home{
-        width: 5em;
+        width: 17em;
+        position: absolute;
+        left:10em;
+        bottom: -15em;
+
+        max-width: 300px;
     }
     
-    
+    .boxContent{
+        margin-right: 15vw;
+
+        h2{
+            text-align:end;
+            margin-bottom: .7em;
+        }
+        p{
+            text-align:end;
+            font-size: 1.1em;
+            margin-bottom: 1em;
+        }
+        .btns{
+            @include fb;
+            gap:4em;
+
+            margin-bottom: 2em;
+
+            button{
+                width: 7em;
+                height: 2em;
+                border-radius: .5em 0 ;
+            }
+        }
+        .icons{
+            @include fb;
+
+            .icon__home{
+                width: 3rem;
+                fill: white;
+                transition: opacity 0.3s ease-in-out;
+                opacity: 50%;
+                cursor: pointer;
+                &:hover {
+                    opacity: 100%;
+                  }
+            }
+        }
+    }
 
     
 }
@@ -23,6 +79,7 @@
     background-color: #141118;
     height: 100vh;
 
+    padding: 5em 10em;
     img{
         width: 20em;
     }

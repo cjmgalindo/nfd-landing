@@ -21,7 +21,7 @@ function Logos() {
   }
 
   return (
-    <section className='section__logos'>
+    <section className='section__logos' id='section__logos'>
       <h1>LOGOS</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis, eos doloribus aliquid cupiditate totam. Quod!</p>
       <div className='box__logos'>

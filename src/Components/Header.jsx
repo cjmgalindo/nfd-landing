@@ -1,6 +1,6 @@
 import React from 'react'
 import './components.scss'
-
+import { HashLink } from 'react-router-hash-link';
 import logo from '../media/logo.png'
 
 
@@ -8,15 +8,22 @@ import logo from '../media/logo.png'
 function Header() {
   return (
     <header>
+    
       <div className='box_logo_main'>
-        <img src={logo} alt="" />
+      <HashLink smooth to="/#section__home"><img src={logo} alt="" /></HashLink> 
+        
       </div>
 
       <nav>
         <ul>
-          <li>about</li>
-          <li>assets</li>
-          <li>title3
+          <li> 
+          <HashLink smooth to="/#section__about">About</HashLink> 
+          </li>
+          <li>
+          <HashLink smooth to="/#section__assets">Assets</HashLink> 
+          </li>
+          <li>
+          <HashLink smooth to="/">Title3</HashLink> 
               <ul className='list-vertical'>
                 <li>subtit</li>
                 <li>subtit</li>

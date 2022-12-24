@@ -28,7 +28,7 @@ function Users() {
   }
   
   return (
-    <section className="section__users">
+    <section className="section__users" id='section__users'>
       <h1>USERS</h1>
 
       <div className="cards__users">

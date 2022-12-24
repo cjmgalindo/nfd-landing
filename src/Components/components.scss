@@ -1,14 +1,14 @@
-@mixin flexbox{
+@mixin fb{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 header{
-    position: absolute;
-
+    position: fixed;
+    z-index: 100;
     width: 100%;
-    @include flexbox();
+    @include fb();
     justify-content: space-between;
 
 
@@ -16,17 +16,20 @@ header{
     .box_logo_main{
         img{
             width: 15em;
+            margin-left: 4em
         }
     }
 
     nav{
-        @include flexbox();
-        
+        width: 90%;
+        @include fb();
+        justify-content: space-between;
+        margin-right: 4em;
         
         ul{
-            
-            @include flexbox();
-          
+            width: 100%;
+            @include fb();
+            justify-content: space-evenly;
 
             text-transform: uppercase;
             font-weight: 700;

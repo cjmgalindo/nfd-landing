@@ -8,7 +8,7 @@ import lredbull from '../media/logos/logo_test3.png'
 
 function About() {
   return (
-    <section className="section__about">
+    <section className="section__about" id='section__about'>
       <h1>ABOUT</h1>
 
       <div className='box__about'>
