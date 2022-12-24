@@ -1,0 +1,54 @@
+@mixin flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: black;
+
+    @include flexbox();
+    justify-content: space-between;
+    
+    padding: 0 10vw;
+
+
+    .box_logo_main{
+        img{
+            width: 15em;
+        }
+    }
+
+    nav{
+        @include flexbox();
+        gap: 2em;
+        
+        ul{
+            width: 90%;
+            @include flexbox();
+            gap: 4em;
+
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.3em;
+
+            li{
+                cursor: pointer;
+
+                .list-vertical{
+                display: none;
+            }
+            }
+            
+        }
+    }
+
+    button{
+        background: #92132E;
+        width: 5.5em;
+        height: 1.5em;
+        font-weight: 700;
+        border-radius: .5em 0 ;
+        
+    }
+}

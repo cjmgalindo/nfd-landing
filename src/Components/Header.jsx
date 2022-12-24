@@ -1,21 +1,35 @@
 import React from 'react'
 import './components.scss'
 
+import logo from '../media/logo.png'
+import mustache from '../media/mostacho.png'
 
 function Header() {
   return (
     <header>
       <div className='box_logo_main'>
-
+        <img src={logo} alt="" />
       </div>
-      <ul>
-        <li>4</li>
-        <li>4</li>
-        <li>4</li>
-        <li>4</li>
-        <li>asd</li>
-        <li>adsa</li>
-      </ul>
+
+      <nav>
+        <ul>
+          <li>about</li>
+          <li>assets</li>
+          <li>title3
+              <ul className='list-vertical'>
+                <li>subtit</li>
+                <li>subtit</li>
+                <li>subtit</li>
+              </ul>
+          </li>
+          <li>titl01</li>
+          <li>contact</li>
+          
+        </ul>
+        <button>
+          title4
+        </button>
+      </nav>
     </header>
   )
 }
