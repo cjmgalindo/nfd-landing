@@ -2,7 +2,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    
 }
 
 @mixin fb{
@@ -24,12 +24,11 @@
 
 
     .personaje__home{
-        width: 17em;
+        height: 100vh;
         position: absolute;
-        left:10em;
-        bottom: -15em;
+        left: 9vw;
+        bottom: -20vh;
 
-        max-width: 300px;
     }
     
     .boxContent{
@@ -76,37 +75,365 @@
 }
 
 .section__about{
+    padding:  0 10em;
+    @include fb();
+    flex-direction: column;
     background-color: #141118;
     height: 100vh;
+    justify-content: space-between;
 
-    padding: 5em 10em;
-    img{
-        width: 20em;
+    h1{
+            margin-top: 3.5em;
+            display: flex;
+            align-self: start;
+            justify-self: end;
+        }
+    
+    
+
+    
+    .box__about{
+        // background:url(../media/Untitled.svg) ;
+        // background-repeat: no-repeat;
+        // background-size: 95% auto;
+        // background-position: center;
+        // position: relative;
+        // height: 50vh;
+        // width: 50vw;
+        position: relative;
+        background-color: #2E2836;
+        padding: 2em;
+      
+        
+        
+        
+        
+        p{
+            
+            width: 60%;
+        }
+        img{
+            position: absolute;
+            width: 25em;
+            bottom: -1em;
+            right: -4em;
+        }
+    }
+
+    .slider{
+        width: 50vw;
+        margin-bottom: 2em;
+        overflow: hidden;
+    
+        .slide-track{
+            display: flex;
+            justify-content: space-between;
+            width: calc(200px *12);
+            animation: scroll 20s linear infinite;
+            -webkit-animation: scroll 20s linear infinite;
+          
+
+            .slide{
+                @include fb;
+                width: 8em;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        @keyframes scroll {
+            0%{
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            100%{
+                -webkit-transform: translateX(calc(-200px * 7));
+                transform: translateX(calc(-200px * 7));
+            }
+        }
     }
 }
 
 .section__assets{
+    padding:  0 10em;
     background-image: linear-gradient(rgba(37, 39, 70, 0.5), rgba(19, 19, 49, 0.7)),url(../media/bg/bg-assets.jpg);
     @include bg;
+    @include fb;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    background-color: #141118;
     height: 100vh;
+    
+
+     h1{
+            margin-top: 3.5em;
+            display: flex;
+            align-self: end;
+        }
+
+    .tabs__assets{
+        background-color: #5F5F5F;
+        border-bottom: .5em solid #5F5F5F ;
+        border-radius: 0.6em 0.6em 0 0; 
+        width: 44em;
+       
+        button{
+            background-color: #141118;
+            
+            margin: 0;
+            padding: 0;
+            width: 10em;
+            height: 3em;
+
+            &:first-child {
+                border-radius:0.5em 0 0 0; 
+            }
+            &:last-child {
+                border-radius:0em 0.5em 0 0; 
+            }
+            
+        }
+
+        .active{
+            background-color: #5F5F5F;
+        }
+    }
+    .box__assets{
+        background-color: red;
+        height: 65vh;
+        margin-bottom: 5vh;
+    }
 }
 
 .section__timelin{
     background-color: #141118;
+
+    padding:  0 10em;
+    @include fb();
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #141118;
     height: 100vh;
+
+
+    h1{
+        margin-top: 3.5em;
+        display: flex;
+        align-self: start;
+        justify-self: end;
+    }
+
+    .cards{
+        margin-bottom: 5em;
+        .card__timelin{
+            border: .4em solid #3D3447;
+            border-radius: 2em;
+            
+    
+            @include fb;
+            width: 100%;
+            height: 12vh;
+            
+    
+            .code{
+                text-align: center;
+                font-size: 2.3em;
+                font-weight: bold;
+                margin-right: 2em;
+            }
+            .text{
+                h3{
+                    color: #CCC1E1;
+                    margin-bottom: 1em;
+                }
+                p{
+    
+                }
+            }
+        }
+    }
 }
 
 .section__users{
     background-image: linear-gradient(rgba(7, 7, 7, 0.5), rgba(0, 0, 0, 0.7)),url(../media/bg/bg-users.jpg);
     @include bg;
+    @include fb;
+    justify-content: space-between;
+    flex-direction: column;
     height: 100vh;
+    padding:0 8em;
 
-    img{
-        width: 10em;
+    
+   
+        h1{
+            margin-top: 13vh;
+            display: flex;
+            align-self: end;
+            justify-self: start;
+        }
+    
+
+    .cards__users{
+        @include fb;
+        gap: 1em;
+        flex-wrap: wrap;
+        margin-bottom: 5vh;
+        height: 80vh;
+
+        .card__users{
+            border-radius: .5em;
+            padding: .7em;
+            background-color:#1F1F1F;
+           
+
+            @include fb;
+            flex-direction: column;
+            gap: .7em;            
+            width: 10em;
+            img{
+            width: 100%;
+            }
+            .box-date{
+                width: 100%;
+                @include fb;
+                justify-content: space-between;
+                .icon{
+                    width: 3rem;
+                    fill: white;
+                    transition: opacity 0.3s ease-in-out;
+                    opacity: 50%;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 100%;
+                      }
+                }
+                h6{
+                    color: #6A6A6A;
+                }
+            }
+        }
     }
+
+    
+
+
 }
+
 .section__logos{
+    position: relative;
     background-color: #141118;
-    height: 60vh;
+    @include fb;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    height: 75vh;
+    padding:0 8em;
+
+    h1{
+        margin-top: 13vh;
+        
+    }
+    p{
+        font-size: .8em;
+    }
+
+    .box__logos{
+        
+        margin-top: 5vh;
+        
+        display: grid;
+        grid-template-columns: repeat(3,8em);
+        grid-template-rows: repeat(2, 3vw);
+        gap: 1em 2em;
+
+        .boxLogo{
+            @include fb;
+            background-color: #1F1F1F;
+            border-radius: .5em;
+            padding: .8em 1em;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .boxDiscord{
+       
+        position: absolute;
+        bottom: -2em;
+
+        align-self: center;
+        background-color: #6187B6;
+        border-radius: .5em;
+        width: 70vw;
+        height: 20vh;
+        @include fb;
+        justify-content: space-between;
+        padding: 1em 2em;
+ display: none;
+
+        h1{
+            width: 40%;
+            margin: 0;
+            color: black;
+            font-weight: 800;
+            font-size: 1.5em;
+         text-align: center;
+         @include fb;
+         flex-direction: column;
+
+            span{
+                @include fb;
+                font-size: 1.3em;
+                font-weight: 900;
+                color: black;
+                height: 2em;
+
+                .icon{
+                    width: 4rem;
+                    fill: rgb(0, 0, 0);
+                    transition: opacity 0.3s ease-in-out;
+                    
+                   
+                    
+                }
+            }
+        }
+
+        .boxTxt{
+            width: 60%;
+            @include fb;
+            flex-direction: column;
+            p{
+                
+                text-align: justify;
+                color: black;
+            }
+
+            button{
+                margin-top: .7em;
+                background-color: black;
+                width: 7em;
+                height: 2em;
+                
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+        }
+.person{
+        position: absolute;
+        height: 45vh;
+        right: 0;
+        top: -45vh;
+        
+    }
+
+    }
+    
+
 }
 

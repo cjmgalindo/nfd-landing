@@ -25,8 +25,10 @@ function Timelin() {
   return (
     <section className="section__timelin" id='section__timelin'>
       <h1>TIMELIN</h1>
-
-      {fBox(3)}
+      <div className='cards'>
+        {fBox(3)}
+      </div>
+      
     </section>
   )
 }
