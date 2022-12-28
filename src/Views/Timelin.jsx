@@ -12,7 +12,7 @@ function Timelin() {
           <p className='code'>Q{i} <br /> 2021</p>
           <div className='text'>
             <h3>Starting point</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit perferendis sequi soluta molestias, sit magni veritatis repellat provident tempore voluptatum? Repellendus id enim tempora molestias eaque. Aspernatur, possimus distinctio? Saepe porro nihil suscipit magni rem tempore similique, laudantium eligendi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit perferendis sequi soluta molestias, sit magni veritatis repellat provident tempore voluptatum? Repellendus id enim tempora molestias eaque. Aspernatur, possimus distinctio.</p>
           </div>
         </div>
       )
@@ -27,6 +27,10 @@ function Timelin() {
       <h1>TIMELIN</h1>
       <div className='cards'>
         {fBox(3)}
+
+        <div className='btn-slide'>
+
+        </div>
       </div>
       
     </section>

@@ -23,15 +23,15 @@ function Header() {
           <HashLink smooth to="/#section__assets">Assets</HashLink> 
           </li>
           <li>
-          <HashLink smooth to="/">Title3</HashLink> 
+          <HashLink smooth to="/#section__timelin">Title3</HashLink> 
               <ul className='list-vertical'>
                 <li>subtit</li>
                 <li>subtit</li>
                 <li>subtit</li>
               </ul>
           </li>
-          <li>titl01</li>
-          <li>contact</li>
+          <li > <HashLink smooth to="/#section__users">titl01</HashLink></li>
+          <li > <HashLink smooth to="/#section__logos">contact</HashLink></li>
           
         </ul>
         <button>

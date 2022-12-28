@@ -1,0 +1,49 @@
+@mixin fb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// *{
+//     border: .1em solid black;
+// }
+
+.tab__asset{
+    background: red;
+    @include fb;
+    
+    .box-slide{
+        background: rgb(32, 209, 232);
+        height: 50vh;
+        width: 62vw;
+
+        overflow: hidden;
+        overflow-x: scroll;
+        display: flex;
+
+        img{
+            width: 10em;
+        }
+    }
+
+    .btns{
+        width: 12vw;
+        @include fb;
+        flex-direction: column;
+        background: #292836;
+        height: 10em;
+        
+        button{
+            background: #292836;
+            font-size: .8em;
+            
+            height: 2em;
+            border-radius: .5em;
+           
+
+            &:hover{
+                background: #1D1D29;
+            }
+        }
+    }
+}

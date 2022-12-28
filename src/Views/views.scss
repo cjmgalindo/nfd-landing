@@ -32,7 +32,8 @@
     }
     
     .boxContent{
-        margin-right: 15vw;
+        margin-right: 12vw;
+        
 
         h2{
             text-align:end;
@@ -75,7 +76,7 @@
 }
 
 .section__about{
-    padding:  0 10em;
+    padding:  0 13vw;
     @include fb();
     flex-direction: column;
     background-color: #141118;
@@ -83,7 +84,7 @@
     justify-content: space-between;
 
     h1{
-            margin-top: 3.5em;
+            margin-top: 14vh;
             display: flex;
             align-self: start;
             justify-self: end;
@@ -122,7 +123,7 @@
 
     .slider{
         width: 50vw;
-        margin-bottom: 2em;
+        margin-bottom: 5vh;
         overflow: hidden;
     
         .slide-track{
@@ -156,7 +157,8 @@
 }
 
 .section__assets{
-    padding:  0 10em;
+    padding:  0 13vw;
+    width: 74vw;
     background-image: linear-gradient(rgba(37, 39, 70, 0.5), rgba(19, 19, 49, 0.7)),url(../media/bg/bg-assets.jpg);
     @include bg;
     @include fb;
@@ -169,7 +171,7 @@
     
 
      h1{
-            margin-top: 3.5em;
+            margin-top: 14vh;
             display: flex;
             align-self: end;
         }
@@ -178,11 +180,12 @@
         background-color: #5F5F5F;
         border-bottom: .5em solid #5F5F5F ;
         border-radius: 0.6em 0.6em 0 0; 
-        width: 44em;
+        
        
         button{
             background-color: #141118;
-            
+            font-size: 1em;
+            font-weight: 900;
             margin: 0;
             padding: 0;
             width: 10em;
@@ -204,6 +207,7 @@
     .box__assets{
         background-color: red;
         height: 65vh;
+        
         margin-bottom: 5vh;
     }
 }
@@ -211,7 +215,7 @@
 .section__timelin{
     background-color: #141118;
 
-    padding:  0 10em;
+    padding:  0 13vw;
     @include fb();
     justify-content: space-between;
     flex-direction: column;
@@ -220,41 +224,58 @@
 
 
     h1{
-        margin-top: 3.5em;
+        margin-top: 14vh;
         display: flex;
         align-self: start;
         justify-self: end;
     }
 
     .cards{
-        margin-bottom: 5em;
+        height: 75vh;
+        margin-bottom: 5vh;
+        background: red;
+
+        @include fb;
+        justify-content: space-between;
+        flex-direction: column;
+
         .card__timelin{
-            border: .4em solid #3D3447;
+            border: .3em solid #3D3447;
             border-radius: 2em;
             
     
             @include fb;
-            width: 100%;
-            height: 12vh;
+            width: 50vw;
+            height: 16vh;
+
+            padding: 2vh 4vw;
             
     
             .code{
                 text-align: center;
                 font-size: 2.3em;
                 font-weight: bold;
-                margin-right: 2em;
+                margin-right: 4vw;
             }
             .text{
+                height: 100%;
+                
                 h3{
                     color: #CCC1E1;
-                    margin-bottom: 1em;
+                    margin-bottom: 10px;
                 }
                 p{
-    
+                    font-size: .8em;
                 }
             }
         }
+        .btn-slide{
+            background: white;
+            height: 2vh;
+            width: 10vw;
+        }
     }
+    
 }
 
 .section__users{
@@ -264,12 +285,12 @@
     justify-content: space-between;
     flex-direction: column;
     height: 100vh;
-    padding:0 8em;
+    padding:0 13vw;
 
     
    
         h1{
-            margin-top: 13vh;
+            margin-top: 14vh;
             display: flex;
             align-self: end;
             justify-self: start;
@@ -330,11 +351,11 @@
     justify-content: flex-start;
     flex-direction: column;
 
-    height: 75vh;
-    padding:0 8em;
+    height: 70vh;
+    padding:0 13vw;
 
     h1{
-        margin-top: 13vh;
+        margin-top: 14vh;
         
     }
     p{
@@ -343,12 +364,12 @@
 
     .box__logos{
         
-        margin-top: 5vh;
+        margin-top: 4vh;
         
         display: grid;
-        grid-template-columns: repeat(3,8em);
+        grid-template-columns: repeat(3,10vw);
         grid-template-rows: repeat(2, 3vw);
-        gap: 1em 2em;
+        gap: .5em 1.5em;
 
         .boxLogo{
             @include fb;
@@ -364,24 +385,24 @@
     .boxDiscord{
        
         position: absolute;
-        bottom: -2em;
+        bottom: -3vh;
 
         align-self: center;
         background-color: #6187B6;
-        border-radius: .5em;
-        width: 70vw;
-        height: 20vh;
+        border-radius: .8em;
+        width: 65vw;
+        height: 18vh;
         @include fb;
         justify-content: space-between;
         padding: 1em 2em;
- display: none;
+ 
 
         h1{
             width: 40%;
             margin: 0;
             color: black;
             font-weight: 800;
-            font-size: 1.5em;
+            font-size: 1.3em;
          text-align: center;
          @include fb;
          flex-direction: column;
@@ -405,11 +426,11 @@
         }
 
         .boxTxt{
-            width: 60%;
+            width: 50%;
             @include fb;
             flex-direction: column;
             p{
-                
+                font-size: .7em;
                 text-align: justify;
                 color: black;
             }
@@ -424,13 +445,13 @@
                 text-transform: capitalize;
             }
         }
-.person{
+        .person{
         position: absolute;
-        height: 45vh;
+        height: 40vh;
         right: 0;
-        top: -45vh;
+        top: -40vh;
         
-    }
+        }
 
     }
     
