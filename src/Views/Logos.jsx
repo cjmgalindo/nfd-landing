@@ -9,7 +9,7 @@ function Logos() {
     const logos = []
     for (let i = 1; i < cantidad+1; i++) {
       logos.push(
-       <div className='boxLogo'> 
+       <div className='boxLogo' key={i} > 
          <img src={lMicrosoft} alt="" />
        </div>
         

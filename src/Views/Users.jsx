@@ -6,7 +6,7 @@ function Users() {
     const boxs = []
     for (let i = 1; i < cantidad+1; i++) {
       boxs.push(
-        <div className='card__users'>
+        <div className='card__users' key={i}>
           <img src={imgUser} alt="" />
 
           <div className='box-date'>

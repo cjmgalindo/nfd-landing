@@ -7,7 +7,7 @@ function Timelin() {
     const boxs = []
     for (let i = 1; i < cantidad+1; i++) {
       boxs.push(
-        <div className='card__timelin'>
+        <div className='card__timelin' key={i}>
 
           <p className='code'>Q{i} <br /> 2021</p>
           <div className='text'>
