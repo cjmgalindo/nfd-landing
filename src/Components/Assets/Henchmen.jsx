@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import './styleTabs.scss'
+import Slider from "react-slick";
 
 //neutral
 import neutral1 from "../../media/Assets/henchmen/neutral/baron-neutral-1.png";
@@ -33,6 +34,25 @@ import hybrid6 from "../../media/Assets/henchmen/hybrid/untouchable-sativa-2.png
 import free1 from "../../media/Assets/henchmen/free/basic-dealer-female.png";
 import free2 from "../../media/Assets/henchmen/free/basic-dealer-male.png";
 
+import next from '../../media/Assets/next.png'
+import back from '../../media/Assets/back.png'
+
+
+import astronaut from "../../media/Assets/henchmen/neutral/baron-neutral-1.png";
+import celebrating from "../../media/Assets/henchmen/neutral/baron-neutral-2.png";
+import education from "../../media/Assets/henchmen/neutral/lieutenant-neutral-1.png";
+import taken from "../../media/Assets/henchmen/neutral/lieutenant-neutral-2.png";
+
+
+
+const images = [astronaut, celebrating, education, taken];
+
+const neutral = [neutral1,neutral2,neutral3,neutral4,neutral5,neutral6]
+const indica = [indica1,indica2,indica3,indica4,indica5,indica6]
+const hybrid = [hybrid1,hybrid2,hybrid3,hybrid4,hybrid5,hybrid6]
+const free = [free1, free2, free1, free2]
+
+
 
 function Henchmen() {
 
@@ -62,53 +82,95 @@ function Henchmen() {
     background: "#5F5F5F"
   }
 
+
+
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <img src={next} alt="" />
+      </div>
+    );
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <img src={back} alt="" style={{background:"transparent"}}/>
+      </div>
+    );
+  };
+
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const settings = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 10,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
+  };
+
   return (
     <>
         <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quae odio expedita dolor vero iusto quibusdam ratione sit tenetur amet nisi reprehenderit, explicabo qui quo, eos voluptate laboriosam libero. Reiciendis asperiores pariatur accusantium, ea quod atque velit sequi corrupti! Reiciendis reprehenderit quos consequuntur laboriosam qui tempore vitae! Minima, ipsam mollitia!
         </p>
         <div className='tab__asset'>
+
+        
           <div className="box-slide">
 
+            {/* <Slider {...settings}>
+              {images.map((img, idx) => (
+                <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                  <img src={img} alt={img} />
+                </div>
+              ))}
+            </Slider> */}
             { eSlide.neutral &&
-              <>
-                <img src={neutral1} alt="" />
-                <img src={neutral2} alt="" />
-                <img src={neutral3} alt="" />
-                <img src={neutral4} alt="" />
-                <img src={neutral5} alt="" />
-                <img src={neutral6} alt="" />
-              </>
+              <Slider {...settings}>
+                {neutral.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
 
             { eSlide.indica &&
-              <>
-                <img src={indica1} alt="" />
-                <img src={indica2} alt="" />
-                <img src={indica3} alt="" />
-                <img src={indica4} alt="" />
-                <img src={indica5} alt="" />
-                <img src={indica6} alt="" />
-              </>
+              <Slider {...settings}>
+            {indica.map((img, idx) => (
+              <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                <img src={img} alt={img} />
+              </div>
+            ))}
+          </Slider>
             }
+
+
             { eSlide.hybrid &&
-              <>
-                <img src={hybrid1} alt="" />
-                <img src={hybrid2} alt="" />
-                <img src={hybrid3} alt="" />
-                <img src={hybrid4} alt="" />
-                <img src={hybrid5} alt="" />
-                <img src={hybrid6} alt="" />
-              </>
+              <Slider {...settings}>
+            {hybrid.map((img, idx) => (
+              <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                <img src={img} alt={img} />
+              </div>
+            ))}
+          </Slider>
             }
 
             { eSlide.free &&
-              <>
-                <img src={free1} alt="" />
-                <img src={free2} alt="" />
-                
-              </>
-            }
+              <Slider {...settings}>
+                {free.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
+            } 
           </div>
           
           <div className="btns">

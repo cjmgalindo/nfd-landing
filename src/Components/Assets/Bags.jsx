@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Slider from "react-slick";
 
 import bpack1 from '../../media/Assets/bags/backpack-1.png'
 import bpack2 from '../../media/Assets/bags/backpack-2.png'
@@ -8,6 +9,14 @@ import bcase2 from '../../media/Assets/bags/briefcase-2.png'
 
 import duffle1 from '../../media/Assets/bags/duffle-1.png'
 import duffle2 from '../../media/Assets/bags/duffle-2.png'
+
+import next from '../../media/Assets/next.png'
+import back from '../../media/Assets/back.png'
+
+
+const bpack = [bpack1,bpack2,bpack1,bpack2]
+const bcase = [bcase1,bcase2,bcase1,bcase2]
+const duffle = [duffle1,duffle2,duffle1,duffle2]
 
 function Bags() {
   const [eSlide, setSlide] = useState(
@@ -31,6 +40,38 @@ function Bags() {
   const stl = {
     background: "#5F5F5F"
   }
+
+
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <img src={next} alt="" />
+      </div>
+    );
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <img src={back} alt="" style={{background:"transparent"}}/>
+      </div>
+    );
+  };
+
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const settings = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 10,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
+  };
+
   return (
     <>
         <p>
@@ -40,26 +81,32 @@ function Bags() {
           <div className="box-slide">
 
           { eSlide.bpack &&
-              <>
-                <img src={bpack1} alt="" />
-                <img src={bpack2} alt="" />
-                
-              </>
+            <Slider {...settings}>
+                {bpack.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
 
             { eSlide.bcase &&
-              <>
-                <img src={bcase1} alt="" />
-                <img src={bcase2} alt="" />
-                
-              </>
+              <Slider {...settings}>
+                {bcase.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
             { eSlide.duffle &&
-              <>
-                <img src={duffle1} alt="" />
-                <img src={duffle2} alt="" />
-                
-              </>
+              <Slider {...settings}>
+                {duffle.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
 
             

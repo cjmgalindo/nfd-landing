@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Slider from "react-slick";
 
 //basic
 import basic1 from "../../media/Assets/printers/basic/PHH.png";
@@ -32,6 +33,15 @@ import silver4 from "../../media/Assets/printers/silver/PWH-233.png";
 import silver5 from "../../media/Assets/printers/silver/PWI-233.png";
 import silver6 from "../../media/Assets/printers/silver/PWS-233.png";
 
+import next from '../../media/Assets/next.png'
+import back from '../../media/Assets/back.png'
+
+
+const basic = [basic1,basic2,basic3,basic4,basic5,basic6]
+const common = [common1,common2,common3,common4,common5,common6]
+const gold = [gold1,gold2,gold3,gold4,gold5,gold6]
+const silver = [silver1,silver2,silver3,silver4,silver5,silver6]
+
 function Printers() {
   const [eSlide, setSlide] = useState(
     {
@@ -57,6 +67,37 @@ function Printers() {
   const stl = {
     background: "#5F5F5F"
   }
+
+
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <img src={next} alt="" />
+      </div>
+    );
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <img src={back} alt="" style={{background:"transparent"}}/>
+      </div>
+    );
+  };
+
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const settings = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 10,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
+  };
   return (
     <>
         <p>
@@ -66,43 +107,42 @@ function Printers() {
           <div className="box-slide">
 
           { eSlide.basic &&
-              <>
-                <img src={basic1} alt="" />
-                <img src={basic2} alt="" />
-                <img src={basic3} alt="" />
-                <img src={basic4} alt="" />
-                <img src={basic5} alt="" />
-                <img src={basic6} alt="" />
-              </>
+            <Slider {...settings}>
+                {basic.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
 
             { eSlide.common &&
-              <>
-                <img src={common1} alt="" />
-                <img src={common2} alt="" />
-                <img src={common3} alt="" />
-                <img src={common4} alt="" />
-                <img src={common5} alt="" />
-                <img src={common6} alt="" />
-              </>
+              <Slider {...settings}>
+                {common.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
             { eSlide.gold &&
-              <>
-                <img src={gold1} alt="" />
-                <img src={gold2} alt="" />
-                <img src={gold3} alt="" />
-                <img src={gold4} alt="" />
-                <img src={gold5} alt="" />
-                <img src={gold6} alt="" />
-              </>
+              <Slider {...settings}>
+                {gold.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
 
             { eSlide.silver &&
-              <>
-                <img src={silver1} alt="" />
-                <img src={silver2} alt="" />
-                
-              </>
+              <Slider {...settings}>
+                {silver.map((img, idx) => (
+                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                    <img src={img} alt={img} />
+                  </div>
+                ))}
+              </Slider>
             }
           </div>
           

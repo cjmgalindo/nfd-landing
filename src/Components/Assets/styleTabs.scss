@@ -1,3 +1,9 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+
 @mixin fb{
     display: flex;
     justify-content: center;
@@ -9,21 +15,18 @@
 // }
 
 .tab__asset{
-    background: red;
     @include fb;
+    justify-content: space-evenly;
     
     .box-slide{
-        background: rgb(32, 209, 232);
         height: 50vh;
-        width: 62vw;
-
-        overflow: hidden;
-        overflow-x: scroll;
+        width: 40vw;
+        
         display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
 
-        img{
-            width: 10em;
-        }
     }
 
     .btns{
@@ -31,19 +34,72 @@
         @include fb;
         flex-direction: column;
         background: #292836;
+        border-radius: .5em;
         height: 10em;
         
         button{
+          
             background: #292836;
             font-size: .8em;
             
             height: 2em;
             border-radius: .5em;
+            padding: 0 .5em;
            
 
             &:hover{
                 background: #1D1D29;
+                cursor: url("../../media/Assets/hand_active.png"), pointer;
             }
         }
     }
+}
+
+
+
+
+
+.Slide {
+  // background: red;
+ 
+  
+  transition: transform 300ms;
+  opacity: 0.3;
+  transform: scale(1.2);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 70%;
+    max-height: 42vh;
+    margin: 3em 0 3em 0;
+    
+    
+  }
+}
+
+.activeSlide {
+  transform: scale(1.3);
+  opacity: 1;
+}
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow img {
+  transition: color 300ms;
+  width: 2em;
+}
+.arrow img:hover {
+  color: #68edff;
+}
+.next {
+  right: 0%;
+  top: 40%;
+}
+.prev {
+  left: 0%;
+  top: 40%;
 }
