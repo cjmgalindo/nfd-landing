@@ -26,9 +26,11 @@ function Footer() {
           
         </div>
 
-        <div class="footer-list-wrap">
+        <div class="footer-list-wrap email">
           <h6 class="point"></h6>
+
           <h6>Subscribe To Our Newsletter:</h6>
+          
           <div className="input">
             <input type="email" name="" id="" placeholder="Email Address"/>
             <button>Subscribe</button>
@@ -45,7 +47,7 @@ function Footer() {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
-            height="50"
+            height="30"
             viewBox="0 0 24 24"
             className="icon__home"
           >
@@ -55,7 +57,7 @@ function Footer() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={50}
-            height={50}
+            height={30}
             viewBox="0 0 24 24"
             className="icon__home"
           >
@@ -65,7 +67,7 @@ function Footer() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={50}
-            height={50}
+            height={30}
             viewBox="0 0 24 24"
             className="icon__home"
           >
@@ -75,7 +77,7 @@ function Footer() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={50}
-            height={50}
+            height={30}
             viewBox="0 0 24 24"
             className="icon__home"
           >
