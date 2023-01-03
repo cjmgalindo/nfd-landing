@@ -314,7 +314,7 @@
             @include fb;
             width: 50vw;
             height: 16vh;
-            margin-bottom: 1em;
+            margin-bottom: 2em;
             padding: 2vh 4vw;
             
     
@@ -340,7 +340,7 @@
     
     .pagination{
         position: absolute;
-        bottom: 10px;
+        bottom: 0;
         left: 0;
         display: flex;
         flex-wrap: wrap;
