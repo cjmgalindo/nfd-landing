@@ -134,7 +134,7 @@ function Henchmen() {
             { eSlide.neutral &&
               <Slider {...settings}>
                 {neutral.map((img, idx) => (
-                  <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                  <div key={idx} className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
                     <img src={img} alt={img} />
                   </div>
                 ))}
