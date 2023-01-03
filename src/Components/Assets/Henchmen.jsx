@@ -28,6 +28,13 @@ import hybrid5 from "../../media/Assets/henchmen/hybrid/untouchable-sativa-1.png
 import hybrid6 from "../../media/Assets/henchmen/hybrid/untouchable-sativa-2.png";
 
 //sativa
+import sativa1 from "../../media/Assets/henchmen/sativa/baron-sativa-1.png";
+import sativa2 from "../../media/Assets/henchmen/sativa/baron-sativa-2.png";
+import sativa3 from "../../media/Assets/henchmen/sativa/lieutenant-sativa-1.png";
+import sativa4 from "../../media/Assets/henchmen/sativa/lieutenant-sativa-2.png";
+import sativa5 from "../../media/Assets/henchmen/sativa/untouchable-sativa-1.png";
+import sativa6 from "../../media/Assets/henchmen/sativa/untouchable-sativa-2.png";
+
 
 
 //free
@@ -50,6 +57,7 @@ const images = [astronaut, celebrating, education, taken];
 const neutral = [neutral1,neutral2,neutral3,neutral4,neutral5,neutral6]
 const indica = [indica1,indica2,indica3,indica4,indica5,indica6]
 const hybrid = [hybrid1,hybrid2,hybrid3,hybrid4,hybrid5,hybrid6]
+const sativa = [sativa1,sativa2,sativa3,sativa4,sativa5,sativa6]
 const free = [free1, free2, free1, free2]
 
 
@@ -161,7 +169,15 @@ function Henchmen() {
             ))}
           </Slider>
             }
-
+            { eSlide.sativa &&
+              <Slider {...settings}>
+            {sativa.map((img, idx) => (
+              <div className={idx === imageIndex ? "Slide activeSlide" : "Slide"}>
+                <img src={img} alt={img} />
+              </div>
+            ))}
+          </Slider>
+            }
             { eSlide.free &&
               <Slider {...settings}>
                 {free.map((img, idx) => (
