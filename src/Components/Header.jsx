@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './components.scss'
 import { HashLink } from 'react-router-hash-link';
 import logo from '../media/logo.png'
 import menu from '../media/menu.svg'
-
+import close from '../media/marca-de-la-cruz.png'
 
 function Header() {
+
+  const [eActive, setActive] = useState(false);
+
+  function name() {
+    setActive(!eActive)
+    console.log(eActive)
+  }
+
   return (
     <header>
     
@@ -14,7 +22,8 @@ function Header() {
         
       </div>
 
-      <nav>
+      <nav className={` ${eActive ? "nav__menu" : ' '}`}>
+        <img src={close} alt="" className={`close-menu`} onClick={()=> setActive(!eActive)}/>
         <ul>
           <li> 
           <HashLink smooth to="/#section__about">About</HashLink> 
@@ -39,7 +48,7 @@ function Header() {
         </button>
       </nav>
 
-      <div className="menu">
+      <div className="menu" onClick={()=>name()}>
         <img src={menu} alt="" className='menu__img' />
       </div>
 

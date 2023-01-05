@@ -25,7 +25,9 @@ header{
         @include fb();
         justify-content: space-between;
         margin-right: 4vw;
-        
+        .close-menu{
+            display: none;
+        }
         ul{
             width: 100%;
             @include fb();
@@ -222,16 +224,99 @@ footer{
 
 @media (max-width:800px){
     header{
+        nav{
+            display: none;
+        }
+        .nav__menu{
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 9999;
+            height: 100vh;
+            width: 60vw;
+            
+            margin: 0;
+            background-color: rgba(64, 59, 59, 0.971);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .close-menu{
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                width: 3em;
+                top: 1em;
+                left: 1em;
+            }
+            ul{
+                height: 50%;
+                @include fb();
+                flex-direction: column;
+                justify-content: space-evenly;
+    
+               
+                
+    
+                li{
+                    @include fb;
+                    flex-direction: column;
+                    cursor: pointer;
+                    font-size: 1em;
+    
+                    .list-vertical{
+                        margin-top: 1em;
+                        opacity: 1;
+                        animation: openAnim 200ms ease-in-out;
+
+                      
+                        background-color: transparent;
+                        width: auto;
+                        height: auto;
+                        
+                        display: none;
+                        
+                        position: relative;
+                        left: 0;
+                        transition: all 10s;
+                        li{
+                            text-align: center;
+                            padding: .3em .5em;
+                            
+                            font-size: 1em;
+    
+                            &:hover{
+                                background: transparent;
+                            }
+                        }
+                    }
+                    &:hover .list-vertical{
+                        display: flex;
+                        transition: all 8s;
+                    }
+                }
+                
+            }
+            
+        }
+    
         .menu{
             display: flex;
         }
         
-        nav{
-            display: none;
-        }
+        
         
     }
-
+    @keyframes openAnim {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
 
     footer{
         
