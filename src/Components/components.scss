@@ -78,6 +78,22 @@ header{
     }
 
     
+    .menu{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        
+        display: none;
+    }
+    
+    .menu__img{
+        display: block;
+        width: 36px;
+        cursor: pointer;
+    }
+
+    
 }
 
 
@@ -206,12 +222,14 @@ footer{
 
 @media (max-width:800px){
     header{
-        img{
-            
+        .menu{
+            display: flex;
         }
+        
         nav{
             display: none;
         }
+        
     }
 
 
@@ -223,11 +241,7 @@ footer{
         
         .footer-lists{
             
-                .footer-list-wrap{
-                    
-                    
-                    
-                }
+                
 
                 .email{
                     width: 100%;
@@ -247,9 +261,7 @@ footer{
                             
                             width: 100%;
                         }
-                        button{
-                            
-                        }
+                        
                     }
                 }
     

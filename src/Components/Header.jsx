@@ -2,7 +2,7 @@ import React from 'react'
 import './components.scss'
 import { HashLink } from 'react-router-hash-link';
 import logo from '../media/logo.png'
-
+import menu from '../media/menu.svg'
 
 
 function Header() {
@@ -38,6 +38,13 @@ function Header() {
           title4
         </button>
       </nav>
+
+      <div className="menu">
+        <img src={menu} alt="" className='menu__img' />
+      </div>
+
+
+
     </header>
   )
 }
