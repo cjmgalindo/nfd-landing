@@ -1,12 +1,25 @@
-import React from "react";
+
 import personaje from "../media/header_bg_personaje.png";
 
+
+import React,{useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
+
 function Home() {
+
+  useEffect(()=>{
+    Aos.init({duration:1500});
+
+  },[])
+
+
   return (
     <section className="section__home" id="section__home">
       <img src={personaje} alt="" className="personaje__home" />
 
-      <div className="boxContent">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="boxContent">
         <h2>Hello wannabe Lord</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br /> Ex

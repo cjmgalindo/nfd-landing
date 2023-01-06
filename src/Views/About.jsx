@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 import car from '../media/Assets/vehicles/suv.png'
 
@@ -7,20 +7,32 @@ import lmicrosoft from '../media/logos/logo_test2.png'
 import lredbull from '../media/logos/logo_test3.png'
 import bg from '../media/Untitled.svg'
 
+import React,{useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
+
 
 function About() {
+
+  useEffect(()=>{
+    Aos.init({duration:1500});
+
+  },[])
+
   return (
     <section className="section__about" id='section__about'>
-      <h1>ABOUT</h1>
+      <h1 data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">ABOUT</h1>
 
       
-      <div className='box__about'>
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className='box__about'>
           
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque illo obcaecati laboriosam, at nisi voluptas quidem autem ipsa incidunt laudantium hic? Quidem consequatur quibusdam quasi numquam illum! Quia corporis sed facilis nemo esse ea recusandae minima ipsam. Assumenda repellat autem quasi accusantium atque amet in tenetur totam dolore nesciunt blanditiis corporis.
           <br />
           <br />
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit provident excepturi explicabo. Fugit illum laudantium blanditiis nesciunt labore nemo aperiam a nam.</p>
-          <img src={car} alt="" />
+          <img  src={car} alt="" />
       </div>
 
       <div className="slider">

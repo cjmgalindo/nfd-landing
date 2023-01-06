@@ -1,9 +1,17 @@
-import React from 'react'
+import React,{useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 function Timelin() {
+  useEffect(()=>{
+      Aos.init({duration:1500});
   
+    },[])
  
   function fBox(cantidad) {
+
+    
+
     const boxs = []
     for (let i = 1; i < cantidad+1; i++) {
       boxs.push(
@@ -24,7 +32,8 @@ function Timelin() {
 
   return (
     <section className="section__timelin" id='section__timelin'>
-      <h1>TIMELIN</h1>
+      <h1 data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">TIMELIN</h1>
       {/* <div className='cards'>
         {fBox(3)}
 
@@ -33,7 +42,8 @@ function Timelin() {
         </div>
       </div> */}
       
-      <div className="container-all">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="container-all">
 
         <input type="radio" id="1" name="image-slide" hidden/>
         <input type="radio" id="2" name="image-slide" hidden/>

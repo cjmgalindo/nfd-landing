@@ -28,29 +28,31 @@ function App() {
 
   return (
     <>
-   
+   {/* {loading ? <Preloader /> :  */}
       <div className="App">
+      
+      
       <Header />
       <Routes>
-        <Route path='/' element={loading ? <Preloader /> : 
-        <>
-          
-          <Home />
-          <About />
-          <Assets />
-          <Timelin />
-          <Users />
-          <Logos />
-          
-        </>
-        
-        }/>
+          <Route path='/' element={
+          <>
+            <Home />
+            <About />
+            <Assets />
+            <Timelin />
+            <Users />
+            <Logos />
+          </>
+          }/>
          <Route path='/politicas-de-privacidad' element={<Privacidad  />}/>
          <Route path='/terminos-y-condiciones' element={<Terminos />}/>
       </Routes>
-        <Footer />
+      <Footer />
+
+      
+      
       </div>
-    
+    {/* } */}
       
     </>
   );

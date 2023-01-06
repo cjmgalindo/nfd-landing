@@ -1,6 +1,16 @@
-import React from 'react'
+import React,{useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
 import imgUser from '../media/users.jpg'
+
+
+
 function Users() {
+
+  useEffect(()=>{
+    Aos.init({duration:1500});
+
+  },[])
 
   function fCard(cantidad) {
     const boxs = []
@@ -35,9 +45,11 @@ function Users() {
   
   return (
     <section className="section__users" id='section__users'>
-      <h1>USERS</h1>
+      <h1 data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">USERS</h1>
 
-      <div className="cards__users">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="cards__users">
         {fCard(6)}
       </div>
     </section>

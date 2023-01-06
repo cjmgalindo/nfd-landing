@@ -1,9 +1,15 @@
-import React from 'react'
+import React,{useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
 import './views.scss'
 
 import lMicrosoft from '../media/logos/logo_test3.png'
 import personaje from '../media/img_logos_person.png'
 function Logos() {
+  useEffect(()=>{
+    Aos.init({duration:1500});
+
+  },[])
 
   function fLogo(cantidad) {
     const logos = []
@@ -22,17 +28,20 @@ function Logos() {
 
   return (
     <section className='section__logos' id='section__logos'>
-      <h1>LOGOS</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis, 
+      <h1 data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">LOGOS</h1>
+      <p data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur perspiciatis, 
      <br /> eos doloribus aliquid cupiditate totam. Quod!</p>
 
-      <div className='box__logos'>
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className='box__logos'>
         {fLogo(6)}
       </div>
 
       
 
-      <div className='boxDiscord'>
+      <div data-aos="zoom-in" className='boxDiscord'>
         <h1>
         JOIN COMUNITY
         <br />
