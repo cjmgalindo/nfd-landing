@@ -817,4 +817,30 @@ input[id="1"]:checked ~ .slide{
     opacity: 0;
   }
 }
+
+
+
+
+.page__privacidad, .page__terminos{
+    width: 100vw;
+    @include fb;
+    background:#141118;
     
+    .box__terminos, .box__privacidad{
+        padding: 2em;
+        max-width: 1000px;
+        img{
+            width: 100%;
+            margin-top: 2em;
+        }
+        h1{
+            text-align: center;
+            margin: 1em 0;
+        }
+        p{
+            text-align: justify;
+        }
+
+    }
+
+}

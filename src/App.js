@@ -10,6 +10,9 @@ import Timelin from './Views/Timelin';
 import Users from './Views/Users';
 import Preloader from './Views/Preloader';
 import { useEffect, useState } from 'react';
+import Terminos from './Views/Terminos';
+import { Route, Routes } from 'react-router';
+import Privacidad from './Views/Privacidad';
 
 
 function App() {
@@ -25,20 +28,29 @@ function App() {
 
   return (
     <>
-    { loading &&
-        <Preloader/>
-      }{!loading &&
+   
       <div className="App">
-        <Header />
-        <Home />
-        <About />
-        <Assets />
-        <Timelin />
-        <Users />
-        <Logos />
+      <Header />
+      <Routes>
+        <Route path='/' element={loading ? <Preloader /> : 
+        <>
+          
+          <Home />
+          <About />
+          <Assets />
+          <Timelin />
+          <Users />
+          <Logos />
+          
+        </>
+        
+        }/>
+         <Route path='/politicas-de-privacidad' element={<Privacidad  />}/>
+         <Route path='/terminos-y-condiciones' element={<Terminos />}/>
+      </Routes>
         <Footer />
       </div>
-      }
+    
       
     </>
   );
