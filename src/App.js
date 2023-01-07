@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-   {/* {loading ? <Preloader /> :  */}
+   {loading ? <Preloader /> : 
       <div className="App">
       
       
@@ -52,7 +52,7 @@ function App() {
       
       
       </div>
-    {/* } */}
+    }
       
     </>
   );
