@@ -822,7 +822,7 @@ input[id="1"]:checked ~ .slide{
 
 
 .page__privacidad, .page__terminos{
-    width: 100vw;
+   
     @include fb;
     background:#141118;
     
@@ -833,12 +833,37 @@ input[id="1"]:checked ~ .slide{
             width: 100%;
             margin-top: 2em;
         }
-        h1{
+        
+        .box__content{
+            h1{
             text-align: center;
             margin: 1em 0;
         }
-        p{
-            text-align: justify;
+            h3{
+            margin: 2em 0;
+        }
+            p{
+                text-align: justify;
+                line-height: 1.7;
+                font-size: .9em;
+            }
+            ul{
+                margin-top: 1em;
+                list-style: circle;
+                li{
+                    margin-left: 4em;
+                    font-size: .9em;
+                    line-height: 1.7;
+                }
+            }
+            ol{
+                margin-top: 1em;
+                li{
+                    margin-left: 4em;
+                    font-size: .9em;
+                    line-height: 1.7;
+                }
+            }
         }
 
     }

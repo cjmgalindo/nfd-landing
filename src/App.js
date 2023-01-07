@@ -44,8 +44,8 @@ function App() {
             <Logos />
           </>
           }/>
-         <Route path='/politicas-de-privacidad' element={<Privacidad  />}/>
-         <Route path='/terminos-y-condiciones' element={<Terminos />}/>
+         <Route path='/privacy-policy' element={<Privacidad  />}/>
+         <Route path='/terms-and-conditions' element={<Terminos />}/>
       </Routes>
       <Footer />
 

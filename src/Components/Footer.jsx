@@ -1,5 +1,6 @@
 import React from "react";
 import "./components.scss";
+import { Link } from "react-router-dom";
 
 import moustache from "../media/mostacho.png";
 function Footer() {
@@ -19,9 +20,10 @@ function Footer() {
         <div className="footer-list-wrap">
           <h6 className="point"></h6>
         
+        
             <ul>
-              <li>Abouts</li>
-              <li>Tools</li>
+              <li> <Link to="/privacy-policy">Privacity</Link> </li>
+              <li> <Link to="/terms-and-conditions">Terms</Link> </li>
             </ul>
           
         </div>
