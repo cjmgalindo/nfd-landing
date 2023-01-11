@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import img from '../media/privacidad.png'
 import Footer from '../Components/Footer'
 import Header from '../Components/Header'
 
 function Terminos() {
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-        
+        <Header />
         <div className='page__terminos'>
         
             <div className='box__terminos'>
@@ -166,7 +169,7 @@ function Terminos() {
             </div>
             
         </div>
-        
+        <Footer />
      
     </>
   )

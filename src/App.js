@@ -26,28 +26,32 @@ function App() {
     },8000);
   }, [])
 
+  
+
   return (
     <>
    {loading ? <Preloader /> : 
       <div className="App">
       
       
-      <Header />
+      
       <Routes>
           <Route path='/' element={
           <>
+          <Header />
             <Home />
             <About />
             <Assets />
             <Timelin />
             <Users />
             <Logos />
+            <Footer />
           </>
           }/>
          <Route path='/privacy-policy' element={<Privacidad  />}/>
          <Route path='/terms-and-conditions' element={<Terminos />}/>
       </Routes>
-      <Footer />
+      
 
       
       
