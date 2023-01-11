@@ -63,7 +63,7 @@ function Timelin() {
             </div>
 
             <div className="item-slide">
-            slide 3
+            {fBox(3)} 
             </div>
 
         </div>
