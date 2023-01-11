@@ -8,16 +8,18 @@ function Timelin() {
   
     },[])
  
+    let j = 0;
   function fBox(cantidad) {
 
     
 
     const boxs = []
     for (let i = 1; i < cantidad+1; i++) {
+      j++
       boxs.push(
         <div className='card__timelin' key={i}>
 
-          <p className='code'>Q{i} <br /> 2021</p>
+          <p className='code'>Q{j} <br /> 2021</p>
           <div className='text'>
             <h3>Starting point</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit perferendis sequi soluta molestias, sit magni veritatis repellat provident tempore voluptatum? Repellendus id enim tempora molestias eaque. Aspernatur, possimus distinctio.</p>
@@ -57,7 +59,7 @@ function Timelin() {
             </div>
 
             <div className="item-slide">
-            slide 2
+              {fBox(3)}
             </div>
 
             <div className="item-slide">
