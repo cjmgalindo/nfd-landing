@@ -149,6 +149,7 @@
         img{
             position: absolute;
             height: 50vh;
+            max-height: 330px;
             bottom: -1em;
             right: -4em;
         }
@@ -300,6 +301,7 @@
     flex-direction: column;
     background-color: #141118;
     height: 100vh;
+    overflow: hidden;
 
 
     h1{
@@ -451,7 +453,7 @@
 }
 @media (max-width:800px){
     .section__timelin{
-        padding: .8em;
+       
         h1{
             margin-right: 3%;
         }
@@ -459,7 +461,8 @@
         
         .item-slide{
             .card__timelin{
-                width: 90%;
+                
+
                 .text{
                     p{
                         font-size: .7em;
